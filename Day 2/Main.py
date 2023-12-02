@@ -22,18 +22,13 @@ def PartTwo():
         total = 0
         for line in gameValues:
             colorValues = {'r': 0, 'g': 0, 'b': 0}
-            for item in re.findall(r'( [0-9]+ [r])', line):
-                number = item.lstrip().split(' ')[0]
-                if colorValues['r'] < int(number):
-                    colorValues['r'] = int(number)
-            for item in re.findall(r'( [0-9]+ [g])', line):
-                number = item.lstrip().split(' ')[0]
-                if colorValues['g'] < int(number):
-                    colorValues['g'] = int(number)
-            for item in re.findall(r'( [0-9]+ [b])', line):
-                number = item.lstrip().split(' ')[0]
-                if colorValues['b'] < int(number):
-                    colorValues['b'] = int(number)
+            for item in re.findall(r'( [0-9]+ [rbg])', line):
+                nc = item.lstrip().split(' ')
+                print(nc)
+                number = nc[0]
+                color = nc[1].strip()
+                if colorValues[color] < int(number):
+                    colorValues[color] = int(number)
             total += colorValues['r'] * colorValues['g'] * colorValues['b']   
         print(total)
 
