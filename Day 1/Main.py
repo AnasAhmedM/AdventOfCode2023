@@ -53,7 +53,6 @@ def PartTwo():
                             first = d[line[index:index+5]]
                         last = d[line[index:index+5]]
                 index += 1
-            print(f'L: {line.rstrip()}  N: {str(first) + str(last)}')
             total += int(str(first) + str(last))
         print(total)
 

@@ -24,7 +24,6 @@ def PartTwo():
             colorValues = {'r': 0, 'g': 0, 'b': 0}
             for item in re.findall(r'( [0-9]+ [rbg])', line):
                 nc = item.lstrip().split(' ')
-                print(nc)
                 number = nc[0]
                 color = nc[1].strip()
                 if colorValues[color] < int(number):
