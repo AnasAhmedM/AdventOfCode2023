@@ -43,7 +43,6 @@ def PartTwo():
             matches[card] = match
         
         cards = {i:1 for i in matches.keys()}
-        print(cards)
         for card, m in matches.items():
             instances = cards[card]
             for i in range(instances):
