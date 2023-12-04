@@ -16,10 +16,8 @@ def PartOne():
             matches = len(set(wNumbers).intersection(mNumbers))
         
             cardV = 0
-            if matches >= 1:
-                cardV = 1
-                for i in range(matches-1):
-                    cardV *= 2
+            if matches > 0:
+                cardV = 2**(matches-1)
             
             score += cardV
         
